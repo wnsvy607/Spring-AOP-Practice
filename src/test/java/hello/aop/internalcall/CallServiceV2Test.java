@@ -5,20 +5,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 
-import hello.aop.internalcall.CallServiceV0;
 import hello.aop.internalcall.aop.CallLogAspect;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Import(CallLogAspect.class)
 @SpringBootTest
-class CallServiceV1Test {
+class CallServiceV2Test {
 
 	@Autowired
-	CallServiceV1 callServiceV1;
+	CallServiceV1 callServiceV2;
 
 	@Test
 	void external() {
-		callServiceV1.external();
+		callServiceV2.external();
 	}
 }
